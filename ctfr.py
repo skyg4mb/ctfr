@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 	CTFR - 04.03.18.02.10.00 - Sheila A. Berta (UnaPibaGeek) Modified By Skyg4mb
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 """
 
 ## # LIBRARIES # ##
@@ -12,7 +12,7 @@ import json
 import requests
 
 ## # CONTEXT VARIABLES # ##
-version = 1.2
+version = 1.2	
 
 ## # MAIN FUNCTIONS # ##
 
@@ -52,6 +52,7 @@ def main():
 	subdomains = []
 	target = clear_url(args.domain)
 	output = args.output
+	exclude = args.exclude
 
 	req = requests.get("https://crt.sh/?q=%.{d}&output=json".format(d=target))
 
