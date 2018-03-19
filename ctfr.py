@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ------------------------------------------------------------------------------
-	CTFR - 04.03.18.02.10.00 - Sheila A. Berta (UnaPibaGeek)
+	CTFR - 04.03.18.02.10.00 - Sheila A. Berta (UnaPibaGeek) Modified By Skyg4mb
 ------------------------------------------------------------------------------
 """
 
@@ -56,7 +56,7 @@ def main():
 	req = requests.get("https://crt.sh/?q=%.{d}&output=json".format(d=target))
 
 	if req.status_code != 200:
-		print("[X] Information not available!") 
+		print("[X] Information not available in this moment!") 
 		exit(1)
 
 	json_data = json.loads('[{}]'.format(req.text.replace('}{', '},{')))
